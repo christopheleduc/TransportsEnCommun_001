@@ -16,7 +16,7 @@ namespace TransportsEnCommun_001
             return retour;
         }
 
-        public string GetLinesNearProx(double latitude = 5.727718, double longitude = 45.185603, float distance = 500, bool details = false)
+        public string GetLinesNearProx(string latitude = "5.727718", string longitude = "45.185603", int distance = 500, bool details = false)
         {
             string retour = LinesNearProx(latitude, longitude, distance, details);
             return retour;
@@ -49,7 +49,7 @@ namespace TransportsEnCommun_001
             return responseFromServer;
         }
 
-        private string LinesNearProx(double x, double y, float z, bool details)
+        private string LinesNearProx(string x, string y, int z, bool details)
         {
 
             WebRequest request = WebRequest.Create($"http://data.metromobilite.fr/api/linesNear/json?x={x}&y={y}&dist={z}&details={details}");

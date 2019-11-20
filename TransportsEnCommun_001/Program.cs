@@ -36,7 +36,7 @@ namespace TransportsEnCommun_001
 
             Console.WriteLine("**************************************************************************************");
 
-            ListMetroProx = metrorequests.GetLinesNearProx(5.727718, 45.185603, 500, true);
+            ListMetroProx = metrorequests.GetLinesNearProx("5.727718", "45.185603", 500, true);
                     Console.WriteLine(ListMetroProx);
             //WebRequest request = WebRequest.Create("https://data.metromobilite.fr/api/routers/default/index/routes");
 
