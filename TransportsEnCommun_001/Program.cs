@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,17 +12,6 @@ using System.Threading.Tasks;
 
 namespace TransportsEnCommun_001
 {
-    public class LinesNear
-    {
-        public string id { get; set; }
-        public string gtfsId { get; set; }
-        public string shortName { get; set; }
-        public string longName { get; set; }
-        public string color { get; set; }
-        public string textColor { get; set; }
-        public string mode { get; set; }
-        public string type { get; set; }
-    }
 
     class Program
     {
@@ -28,41 +19,95 @@ namespace TransportsEnCommun_001
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
+            //List<SerializeData> listMetro;
             string listMetro;
-            string ListMetroProx;
-            MetroRequests metrorequests = new MetroRequests();
-                    listMetro = metrorequests.GetLinesNear();
-                    Console.WriteLine(listMetro);
+            string ListMetroProxJson;
+            IList<SerializeProxima> ListMetroProx;
+            
 
-            Console.WriteLine("**************************************************************************************");
+            MetroRequests metrorequests = new MetroRequests();
+
+            Console.WriteLine("********************************Données brut formatés*********************************");
+
+            listMetro = metrorequests.GetLinesNear();
+                    Console.WriteLine(listMetro);
+            //Console.WriteLine(listMetro[0].Id);
+            //foreach (SerializeData listmetro in listMetro)
+            //{
+            //    Console.WriteLine(listmetro.Id);
+            //}
+
+            Console.WriteLine("********************************Données dans un rayon de 500m*************************");
+
+            ListMetroProxJson = metrorequests.GetLinesNearProxJson("5.727718", "45.185603", 500, true);
+                    Console.WriteLine(ListMetroProxJson);
+
+            Console.WriteLine("**********************Arrets + Lignes dans un rayon de 500m***************************");
 
             ListMetroProx = metrorequests.GetLinesNearProx("5.727718", "45.185603", 500, true);
-                    Console.WriteLine(ListMetroProx);
-            //WebRequest request = WebRequest.Create("https://data.metromobilite.fr/api/routers/default/index/routes");
+            //Console.WriteLine(ListMetroProx[0].Id);
+            foreach (SerializeProxima listmetro in ListMetroProx)
+            {
+                Console.WriteLine(listmetro.Name);
 
-            //HttpWebResponse response2 = (HttpWebResponse)request.GetResponse();
+                foreach (string listline in listmetro.Lines)
+                {
+                    Console.WriteLine(listline);
+                }
+            }
 
-            //Console.WriteLine(response2.StatusDescription);
+            Console.WriteLine("**************Arrets + Lignes dans un rayon de 500m sans les doublons*****************");
 
-            //Stream dataStream = response2.GetResponseStream();
+            //List<string> arrets = new List<string>();
+            //List<string> lignes = new List<string>();
+            Dictionary<string, SerializeProxima> arretsAndLines = new Dictionary<string, SerializeProxima>();
 
-            //StreamReader reader = new StreamReader(dataStream);
+            foreach (SerializeProxima metro in ListMetroProx)
+            {
+                if (!arretsAndLines.ContainsKey(metro.Name)==true)
+                {
+                    Console.WriteLine(metro.Name);
+                    arretsAndLines.Add(metro.Name, metro);
+                }
 
-            //string responseFromServer = reader.ReadToEnd();
+                    foreach (string line in metro.Lines)
+                    {
+                        if (!arretsAndLines[metro.Name].Lines.Contains(line)==true)
+                        {
+                            Console.WriteLine(line);
+                            arretsAndLines[metro.Name].Lines.Add(line);
+                        }  
+                    }
 
-            //Console.WriteLine(responseFromServer);
+            }
+            foreach (KeyValuePair<string, SerializeProxima> ele2 in arretsAndLines)
+            {
+                Console.WriteLine("{0} and {1}", ele2.Key, ele2.Value);
+            }
 
-            //WebResponse response2 = request.GetResponse();
-            //Stream dataStream = response2.GetResponseStream();
-            //StreamReader reader = new StreamReader(dataStream);
+            Console.WriteLine("**************Dictionnaire: Clé/Objet************************************");
 
-            //reader.Close();
-            //dataStream.Close();
-            //response2.Close();
+            IDictionaryEnumerator myEnumerator = arretsAndLines.GetEnumerator();
+
+            // If MoveNext passes the end of the 
+            // collection, the enumerator is positioned 
+            // after the last element in the collection 
+            // and MoveNext returns false. 
+            while (myEnumerator.MoveNext())
+            {
+                string json = JsonConvert.SerializeObject(myEnumerator.Value, Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
+                Console.WriteLine(myEnumerator.Key + " --> " + json);
+            }
+                
+
+
 
             Console.Write("Press any key to continue...");
             Console.ReadKey(true);
         }
-    
+
     }
 }

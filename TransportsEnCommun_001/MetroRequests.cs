@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,11 +18,18 @@ namespace TransportsEnCommun_001
             return retour;
         }
 
-        public string GetLinesNearProx(string latitude = "5.727718", string longitude = "45.185603", int distance = 500, bool details = false)
+        public IList<SerializeProxima> GetLinesNearProx(string latitude = "5.727718", string longitude = "45.185603", int distance = 500, bool details = false)
         {
-            string retour = LinesNearProx(latitude, longitude, distance, details);
+            IList<SerializeProxima> retour = LinesNearProx(latitude, longitude, distance, details);
             return retour;
         }
+
+        public string GetLinesNearProxJson(string latitude = "5.727718", string longitude = "45.185603", int distance = 500, bool details = false)
+        {
+            string retour = LinesNearProxJson(latitude, longitude, distance, details);
+            return retour;
+        }
+
 
         private string LinesNear()
         {
@@ -37,19 +46,34 @@ namespace TransportsEnCommun_001
 
             string responseFromServer = reader.ReadToEnd();
 
-            //Console.WriteLine(responseFromServer);
-            //WebResponse response2 = request.GetResponse();
-            //Stream dataStream = response2.GetResponseStream();
-            //StreamReader reader = new StreamReader(dataStream);
-
             reader.Close();
             dataStream.Close();
             response2.Close();
 
-            return responseFromServer;
+            IList<SerializeData> serializedata = JsonConvert.DeserializeObject<IList<SerializeData>>(responseFromServer);
+
+            // Format JSON depuis une string:
+            string json = JsonConvert.SerializeObject(serializedata, Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+
+            //IList<SerializeData> dataobject1 = JsonConvert.DeserializeObject<IList<SerializeData>>(json, new JsonSerializerSettings
+            //{
+            //    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+            //});
+
+            //SerializeData dataobjet1 = JsonConvert.DeserializeObject<SerializeData>(json);
+            //SerializeData serializedata = JsonConvert.DeserializeObject<SerializeData>(json);
+
+            //return dataobject1;
+            return json;
+            //return o.ToString();
+            //return serializedata;
+            //return responseFromServer;
         }
 
-        private string LinesNearProx(string x, string y, int z, bool details)
+        private IList<SerializeProxima> LinesNearProx(string x, string y, int z, bool details)
         {
 
             WebRequest request = WebRequest.Create($"http://data.metromobilite.fr/api/linesNear/json?x={x}&y={y}&dist={z}&details={details}");
@@ -62,18 +86,57 @@ namespace TransportsEnCommun_001
 
             StreamReader reader = new StreamReader(dataStream);
 
-            string responseFromServer = reader.ReadToEnd();
+            //List<SerializeProxima> serializeproxima = JsonConvert.DeserializeObject<List<SerializeProxima>>(reader.ReadToEnd());
 
-            //Console.WriteLine(responseFromServer);
-            //WebResponse response2 = request.GetResponse();
-            //Stream dataStream = response2.GetResponseStream();
-            //StreamReader reader = new StreamReader(dataStream);
+            string response2FromServer = reader.ReadToEnd();
 
             reader.Close();
             dataStream.Close();
             response2.Close();
 
-            return responseFromServer;
+            IList<SerializeProxima> serializeproxima = JsonConvert.DeserializeObject<List<SerializeProxima>>(response2FromServer);
+
+            //string json = JsonConvert.SerializeObject(serializeproxima, Formatting.Indented, new JsonSerializerSettings
+            //{
+            //    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            //});
+
+            //return json;
+            return serializeproxima;
+            //return response2FromServer;
+        }
+
+        private string LinesNearProxJson(string x, string y, int z, bool details)
+        {
+
+            WebRequest request = WebRequest.Create($"http://data.metromobilite.fr/api/linesNear/json?x={x}&y={y}&dist={z}&details={details}");
+
+            HttpWebResponse response3 = (HttpWebResponse)request.GetResponse();
+
+            Console.WriteLine(response3.StatusDescription);
+
+            Stream dataStream = response3.GetResponseStream();
+
+            StreamReader reader = new StreamReader(dataStream);
+
+            //List<SerializeProxima> serializeproxima = JsonConvert.DeserializeObject<List<SerializeProxima>>(reader.ReadToEnd());
+
+            string response2FromServer = reader.ReadToEnd();
+
+            reader.Close();
+            dataStream.Close();
+            response3.Close();
+
+            IList<SerializeProxima> serializeproxima = JsonConvert.DeserializeObject<List<SerializeProxima>>(response2FromServer);
+
+            string json = JsonConvert.SerializeObject(serializeproxima, Formatting.Indented, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+
+            return json;
+            //return serializeproxima;
+            //return response2FromServer;
         }
 
     }
