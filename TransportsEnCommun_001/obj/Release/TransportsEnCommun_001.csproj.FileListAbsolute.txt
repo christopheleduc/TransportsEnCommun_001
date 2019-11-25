@@ -1,9 +1,12 @@
-C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\TransportsEnCommun_001.exe.config
-C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\TransportsEnCommun_001.exe
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\TransportsEnCommun_001.pdb
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\Newtonsoft.Json.dll
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\Newtonsoft.Json.xml
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.csproj.CoreCompileInputs.cache
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.csproj.CopyComplete
-C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.exe
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\TransportsEnCommun_001.exe.config
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\TransportsEnCommun_001.exe
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\bin\Release\MetroLibrary.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.csprojAssemblyReference.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TransportsEnCommun_001\obj\Release\TransportsEnCommun_001.exe

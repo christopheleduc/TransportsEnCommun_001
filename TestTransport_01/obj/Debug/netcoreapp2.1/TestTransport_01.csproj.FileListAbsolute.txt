@@ -1,0 +1,17 @@
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\TestTransport_01.deps.json
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\TestTransport_01.runtimeconfig.json
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\TestTransport_01.runtimeconfig.dev.json
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\TestTransport_01.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\TestTransport_01.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\bin\Debug\netcoreapp2.1\MetroLibrary.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.csprojAssemblyReference.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.csproj.CoreCompileInputs.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.AssemblyInfoInputs.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.AssemblyInfo.cs
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.csproj.CopyComplete
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\TestTransport_01\obj\Debug\netcoreapp2.1\TestTransport_01.pdb

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MetroLibrary;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -101,9 +102,30 @@ namespace TransportsEnCommun_001
                 });
                 Console.WriteLine(myEnumerator.Key + " --> " + json);
             }
-                
+
+            Console.WriteLine("**************Dictionnaire: Test Metro Class************************************");
 
 
+            Metro linemetro = new Metro();
+
+            Dictionary<string, SerializeProxima> LineMetro;
+
+            LineMetro = linemetro.GetLinesMetro("5.727718", "45.185603", 500, true, "http://data.metromobilite.fr/api/linesNear/json?x=5.727718&y=45.185603&dist=500&details=true");
+
+            IDictionaryEnumerator myEnumerator1 = LineMetro.GetEnumerator();
+
+            // If MoveNext passes the end of the 
+            // collection, the enumerator is positioned 
+            // after the last element in the collection 
+            // and MoveNext returns false. 
+            while (myEnumerator1.MoveNext())
+            {
+                string json1 = JsonConvert.SerializeObject(myEnumerator1.Value, Formatting.Indented, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
+                Console.WriteLine(myEnumerator1.Key + " --> " + json1);
+            }
 
             Console.Write("Press any key to continue...");
             Console.ReadKey(true);

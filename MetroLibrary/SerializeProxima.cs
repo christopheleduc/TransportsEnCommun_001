@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TransportsEnCommun_001
+namespace MetroLibrary
 {
     public class SerializeProxima
     {

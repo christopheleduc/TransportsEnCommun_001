@@ -1,0 +1,9 @@
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\obj\Debug\MetroLibrary.csprojAssemblyReference.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\obj\Debug\MetroLibrary.csproj.CoreCompileInputs.cache
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\bin\Debug\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\bin\Debug\MetroLibrary.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\obj\Debug\MetroLibrary.csproj.CopyComplete
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\obj\Debug\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MetroLibrary\obj\Debug\MetroLibrary.pdb
