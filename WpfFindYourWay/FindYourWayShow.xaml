@@ -9,6 +9,6 @@
       Title="FindYourWayShow">
 
     <Grid>
-        
+        <TextBlock Text = "{Binding Path=Stations, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </Page>
