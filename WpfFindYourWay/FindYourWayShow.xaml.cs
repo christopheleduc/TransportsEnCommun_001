@@ -35,9 +35,7 @@ namespace WpfFindYourWay
         {
             InitializeComponent();
             this.DataContext = this;
-            //this.Stations = "Test!!!";
-            //TextBlock textBlock = new TextBlock();
-            //textBlock.Text = "Ceci est un TEST!!!";
+
 
             Metro linemetro = new Metro();
 
@@ -45,28 +43,7 @@ namespace WpfFindYourWay
 
             this.Stations = linemetro.GetLinesMetro("5.727718", "45.185603", 500, true, "http://data.metromobilite.fr/api/linesNear/json?x=5.727718&y=45.185603&dist=500&details=true");
 
-            //IDictionaryEnumerator myEnumerator1 = LineMetro.GetEnumerator();
 
-            //this.Stations = LineMetro
-
-            //this.Stations = LineMetro["GRENOBLE, CASERNE DE BONNE"].Lines[0].ToString();
-            //this.Stations = LineMetro["GRENOBLE, CASERNE DE BONNE"].Zone.ToString();
-            //this.Stations = LineMetro["GRENOBLE, CASERNE DE BONNE"].Name.ToString();
-
-
-            // If MoveNext passes the end of the 
-            // collection, the enumerator is positioned 
-            // after the last element in the collection 
-            // and MoveNext returns false. 
-            //while (myEnumerator1.MoveNext())
-            //{
-            //    string json1 = JsonConvert.SerializeObject(myEnumerator1.Value, Formatting.Indented, new JsonSerializerSettings
-            //    {
-            //        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            //    });
-            //    //Console.WriteLine(myEnumerator1.Key + " --> " + json1);
-            //    this.Stations = myEnumerator1.Key + " --> " + json1;
-            //}
         }
     }
 }
