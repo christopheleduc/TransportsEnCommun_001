@@ -40,3 +40,8 @@ D:\Developpement\C#\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\Newtonsoft.J
 D:\Developpement\C#\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\MetroLibrary.pdb
 D:\Developpement\C#\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\Newtonsoft.Json.xml
 D:\Developpement\C#\TransportsEnCommun_001\WpfFindYourWay\obj\Debug\WpfFindYourWay.csproj.CopyComplete
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\Newtonsoft.Json.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\MetroLibrary.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\WpfFindYourWay\bin\Debug\Newtonsoft.Json.xml
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\WpfFindYourWay\obj\Debug\WpfFindYourWay.csproj.CopyComplete

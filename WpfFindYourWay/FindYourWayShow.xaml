@@ -9,6 +9,45 @@
       Title="FindYourWayShow">
 
     <Grid>
-        <TextBlock Text = "{Binding Path=Stations, UpdateSourceTrigger=PropertyChanged}" />
+        <!--<TextBlock Text = "{Binding Stations, UpdateSourceTrigger=PropertyChanged}" />-->
+
+
+        <ItemsControl ItemsSource="{Binding Stations}" >
+
+            <ItemsControl.ItemTemplate>
+
+                <DataTemplate>
+
+                    <StackPanel>
+
+                        <TextBlock Text="{Binding Key}"></TextBlock>
+
+                        <ItemsControl ItemsSource="{Binding Value.Lines}" >
+
+                            <ItemsControl.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <StackPanel>
+
+                                        <TextBlock Text="{Binding }"></TextBlock>
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+
+                    </StackPanel>
+
+                </DataTemplate>
+
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+
     </Grid>
 </Page>
