@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitaireTransportCom_01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFindYourWay", "WpfFindYourWay\WpfFindYourWay.csproj", "{A3CF295E-BB9E-4581-8431-1B46B27A48EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMFindMetro", "MVVMFindMetro\MVVMFindMetro.csproj", "{6774AB5D-B2CE-4DBB-81EB-D7B6A0E2ECF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A3CF295E-BB9E-4581-8431-1B46B27A48EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3CF295E-BB9E-4581-8431-1B46B27A48EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3CF295E-BB9E-4581-8431-1B46B27A48EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6774AB5D-B2CE-4DBB-81EB-D7B6A0E2ECF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6774AB5D-B2CE-4DBB-81EB-D7B6A0E2ECF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6774AB5D-B2CE-4DBB-81EB-D7B6A0E2ECF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6774AB5D-B2CE-4DBB-81EB-D7B6A0E2ECF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

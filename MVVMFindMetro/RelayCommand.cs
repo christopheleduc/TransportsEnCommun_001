@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfFindYourWay
+namespace MVVMFindMetro
 {
     public class RelayCommand : ICommand
     {
