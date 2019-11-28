@@ -62,5 +62,44 @@
 
         <!-- View send button -->
         <Button Grid.Column="1" Grid.Row="3" Margin="0,10,0,0" Width="125" Height="25" HorizontalAlignment="Center" Command="{Binding Path = command, Mode = TwoWay}">Chercher</Button>
+
+        
+        
+        <ItemsControl ItemsSource="{Binding Stations}" >
+
+            <ItemsControl.ItemTemplate>
+
+                <DataTemplate>
+
+                    <StackPanel>
+
+                        <TextBlock Text="{Binding Key}"></TextBlock>
+
+                        <ItemsControl ItemsSource="{Binding Value.Lines}" >
+
+                            <ItemsControl.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <StackPanel>
+
+                                        <TextBlock Text="{Binding }"></TextBlock>
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+
+                    </StackPanel>
+
+                </DataTemplate>
+
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
     </Grid>
 </UserControl>

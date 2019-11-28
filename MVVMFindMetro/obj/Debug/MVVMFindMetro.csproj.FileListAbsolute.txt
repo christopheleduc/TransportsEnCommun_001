@@ -16,3 +16,12 @@ C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCo
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\MVVMFindMetro.csproj.CoreCompileInputs.cache
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\MVVMFindMetro.exe
 C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\MVVMFindMetro.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\Search.g.cs
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\bin\Debug\MetroLibrary.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\bin\Debug\Newtonsoft.Json.dll
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\bin\Debug\MetroLibrary.pdb
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\bin\Debug\Newtonsoft.Json.xml
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\Search.baml
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\MVVMFindMetro.csproj.CopyComplete
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\Result.g.cs
+C:\Users\christophe.leduc\Documents\Dev\C#\TransportsEnCommun_001\TransportsEnCommun_001\MVVMFindMetro\obj\Debug\Result.baml

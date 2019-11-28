@@ -1,5 +1,11 @@
-﻿using System.ComponentModel;
+﻿using MetroLibrary;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+
 
 namespace MVVMFindMetro.Model
 {
@@ -7,7 +13,7 @@ namespace MVVMFindMetro.Model
     {
     }
 
-    public class FindMetro : INotifyPropertyChanged
+    public class FindMetro : Page, INotifyPropertyChanged
     {
         private string longiTude;
         private string latiTude;
@@ -18,8 +24,6 @@ namespace MVVMFindMetro.Model
         {
             get { return command ?? (command = new RelayCommand(() => MyAction())); }
         }
-
-
 
         public string LongiTude
         {
@@ -34,7 +38,6 @@ namespace MVVMFindMetro.Model
                 {
                     longiTude = value;
                     RaisePropertyChanged("LongiTude");
-                    RaisePropertyChanged("FullName");
                 }
             }
         }
@@ -49,7 +52,6 @@ namespace MVVMFindMetro.Model
                 {
                     latiTude = value;
                     RaisePropertyChanged("LongiTude");
-                    RaisePropertyChanged("FullName");
                 }
             }
         }
@@ -71,14 +73,6 @@ namespace MVVMFindMetro.Model
             }
         }
 
-        public string FullName
-        {
-            get
-            {
-                return longiTude + " " + latiTude;
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void RaisePropertyChanged(string property)
@@ -89,8 +83,26 @@ namespace MVVMFindMetro.Model
             }
         }
 
-        private void MyAction()
+        public Dictionary<string, SerializeProxima> Stations
         {
+            get { return (Dictionary<string, SerializeProxima>)GetValue(StationsProperty); }
+            set { SetValue(StationsProperty, value); }
+        }
+
+        public static readonly DependencyProperty StationsProperty = DependencyProperty.Register("Stations", typeof(Dictionary<string, SerializeProxima>), typeof(MainWindow));
+
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+        private void MyAction(string x = "5.727718", string y = "45.185603", int z = 500)
+        {
+            Result result = new Result();
+            this.NavigationService.Navigate(result);
+
+            this.DataContext = this;
+
+            Metro linemetro = new Metro();
+
+            this.Stations = linemetro.GetLinesMetro(x, y, z, true, "http://data.metromobilite.fr/api/linesNear/json?x=5.727718&y=45.185603&dist=500&details=true");
 
         }
     }

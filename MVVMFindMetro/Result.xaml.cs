@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace MVVMFindMetro
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Result.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class Result : Page
     {
-        public MainWindow()
+        public Result()
         {
             InitializeComponent();
         }
-
     }
 }
