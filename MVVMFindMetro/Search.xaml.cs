@@ -26,13 +26,18 @@ namespace MVVMFindMetro
             InitializeComponent();
         }
 
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Result result = new Result();
+        //    this.NavigationService.Navigate(result);
+        //}
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void FindMetroViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-            MVVMFindMetro.ViewModel.FindMetroViewModel findmetroViewModelObject =
-               new MVVMFindMetro.ViewModel.FindMetroViewModel();
-            findmetroViewModelObject.LoadFindMetros();
+            MVVMFindMetro.Model.FindMetroModel findmetroViewModelObject =
+               new MVVMFindMetro.Model.FindMetroModel();
 
             FindMetroViewControl.DataContext = findmetroViewModelObject;
         }

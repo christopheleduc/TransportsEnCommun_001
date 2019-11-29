@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVMFindMetro.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace MVVMFindMetro.Views
         public FindMetroView()
         {
             InitializeComponent();
+            //this.DataContext = new FindMetro();
         }
     }
 }

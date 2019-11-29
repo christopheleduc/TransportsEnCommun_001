@@ -5,24 +5,33 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Navigation;
 
 
 namespace MVVMFindMetro.Model
 {
-    class FindMetroModel
-    {
-    }
+    //class FindMetroModel
+    //{
+    //}
 
-    public class FindMetro : Page, INotifyPropertyChanged
+    public class FindMetroModel : Page, INotifyPropertyChanged
     {
+
         private string longiTude;
         private string latiTude;
         private int periMetre;
-        private ICommand command;
+        private ICommand commande;
 
-        private ICommand Command
+        public FindMetroModel()
         {
-            get { return command ?? (command = new RelayCommand(() => MyAction())); }
+            LongiTude = "5.727718";
+            LatiTude = "45.185603";
+            PeriMetre = 500;
+        }
+
+        public ICommand Commande
+        {
+            get { return commande ?? (commande = new RelayCommand(() => MyAction())); }
         }
 
         public string LongiTude
@@ -83,26 +92,28 @@ namespace MVVMFindMetro.Model
             }
         }
 
-        public Dictionary<string, SerializeProxima> Stations
-        {
-            get { return (Dictionary<string, SerializeProxima>)GetValue(StationsProperty); }
-            set { SetValue(StationsProperty, value); }
-        }
+        //public Dictionary<string, SerializeProxima> Stations
+        //{
+        //    get { return (Dictionary<string, SerializeProxima>)GetValue(StationsProperty); }
+        //    set { SetValue(StationsProperty, value); }
+        //}
 
-        public static readonly DependencyProperty StationsProperty = DependencyProperty.Register("Stations", typeof(Dictionary<string, SerializeProxima>), typeof(MainWindow));
+        //public static readonly DependencyProperty StationsProperty = DependencyProperty.Register("Stations", typeof(Dictionary<string, SerializeProxima>), typeof(MainWindow));
 
         //public event PropertyChangedEventHandler PropertyChanged;
 
-        private void MyAction(string x = "5.727718", string y = "45.185603", int z = 500)
+        private void MyAction()
         {
             Result result = new Result();
             this.NavigationService.Navigate(result);
+            //Result result = new Result();
+            //this.NavigationService.Navigate(result);
 
-            this.DataContext = this;
+            //this.DataContext = this;
 
-            Metro linemetro = new Metro();
+            //Metro linemetro = new Metro();
 
-            this.Stations = linemetro.GetLinesMetro(x, y, z, true, "http://data.metromobilite.fr/api/linesNear/json?x=5.727718&y=45.185603&dist=500&details=true");
+            //this.Stations = linemetro.GetLinesMetro(x, y, z, true, "http://data.metromobilite.fr/api/linesNear/json?x=5.727718&y=45.185603&dist=500&details=true");
 
         }
     }

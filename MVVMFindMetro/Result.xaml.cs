@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,13 @@ namespace MVVMFindMetro
     /// <summary>
     /// Logique d'interaction pour Result.xaml
     /// </summary>
-    public partial class Result : Page
+    public partial class Result : Page, INotifyPropertyChanged
     {
         public Result()
         {
             InitializeComponent();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
